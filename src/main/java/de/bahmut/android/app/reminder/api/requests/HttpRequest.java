@@ -40,6 +40,7 @@ public class HttpRequest extends AsyncTask<Uri, Void, ApiResponse> {
         ApiResponse response;
         try {
             final HttpURLConnection connection = (HttpURLConnection) new URL(requestUri.toString()).openConnection();
+            connection.setInstanceFollowRedirects(true);
             connection.setRequestMethod(requestMethod);
             connection.setReadTimeout(READ_TIMEOUT);
             connection.setConnectTimeout(CONNECTION_TIMEOUT);

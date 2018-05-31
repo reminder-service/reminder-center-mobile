@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        textMessage = (EditText) findViewById(R.id.message);
-        final FloatingActionButton sendFab = (FloatingActionButton) findViewById(R.id.send);
+        textMessage = findViewById(R.id.message);
+        final FloatingActionButton sendFab = findViewById(R.id.send);
         sendFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

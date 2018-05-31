@@ -13,6 +13,7 @@ import java.util.Map;
 public class ReminderClient {
 
     private static final int CODE_CREATED = 201;
+    private static final String INDEX = "index.php";
     private static final String IDENTIFIER = "identifier";
     private static final String MESSAGE = "message";
 
@@ -38,6 +39,7 @@ public class ReminderClient {
 
         final Uri requestUri = baseUri.buildUpon()
                 .appendPath(MESSAGE)
+                .appendPath(INDEX)
                 .build();
 
         final ApiResponse response;
